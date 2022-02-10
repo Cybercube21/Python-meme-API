@@ -7,11 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Index</title>
   <link rel="stylesheet" href="/templates/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar">
-      <div id='navbar__title'>Cubie's meme API</div>
       <div class="navbar__container">
         <div class="navbar__toggle">
             <span class="bar"></span>
@@ -34,15 +34,26 @@
   <div class="center-object">
     <div class="wrapper">
       <main class='page-main'>
-        Want to implement my memes on your Website? Just check the options below!
-        <h2 class="accordion-header" id="headingPing">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePing" aria-expanded="true" aria-controls="collapsePing">
-              <span class="badge badge_get" style="margin-right: 5px;">get</span><label id="endpoint">/ping</label>
-          </button>
-        </h2>
+        <p class="headline"> Cubie's API v0.69 (Beta)</p>
+        <p class="description"><b>Base URL: </b>https://api.cybercube21.de</p>
+        <p class="description"><b>Total API calls: </b>Coming Soon!</p>
+        <div class="endpoints">
+          <p class="endpoint_headline">Endpoints</p>
+          <button class="accordion" id="headline_accordion">GET /ping</button>
+            <div class="panel">
+              <p>Ping the server:</p>
+              <p class="panel_link">https://api.cybercube21.de/ping</p>
+            </div>
+            <button class="accordion">GET /memes</button>
+            <div class="panel">
+              <p>Get a URL for a random meme:</p>
+              <p class="panel_link">https://api.cybercube21.de/memes</p>
+            </div>
+        </div>
       </main> 
     </div>
   </div>
+  <script src="/templates/index.js"></script>
 </body>
 
 </html>
