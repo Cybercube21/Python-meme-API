@@ -6,7 +6,7 @@ import os, random
 
 app = Flask(__name__)
 api = Api(app)
-file_list=os.listdir(r"./memes/")
+file_list=os.listdir(r"../memes/")
 
 class Memes(Resource):
     def get(self):
@@ -16,4 +16,4 @@ class Memes(Resource):
 api.add_resource(Memes, '/memes')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=6969)
