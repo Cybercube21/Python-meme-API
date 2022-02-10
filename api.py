@@ -1,8 +1,6 @@
 from flask import Flask
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, Api
 from flask import render_template
-import pandas as pd
-import ast
 import os, random
 
 app = Flask(__name__,
@@ -10,7 +8,7 @@ app = Flask(__name__,
             static_folder='./',
             template_folder='templates/')
 api = Api(app)
-file_list=os.listdir(r"../memes/")
+file_list=os.listdir(r"memes/")
 
 @app.route("/")
 def index():

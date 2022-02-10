@@ -10,34 +10,37 @@
 </head>
 
 <body>
-  <div>
-    <nav className="navbar">
-        <div id='navbar__title'>Cubie's Meme API</div>
-        <div className="navbar__container">
-          <div className="navbar__toggle">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-          </div>
-          <ul className="navbar__menu">
-              <li className="navbar__item">
-                <a href="https://cybercube21.de" className="navbar__links"> Home </a>
-              </li>
-              <li className="navbar__item">
-                <a href="/" className="navbar__links"> Memes </a>
-              </li>
-              <li className="navbar__item">
-                <a href="https://cybercube21.de/contact.html" className="navbar__links"> Contact </a>
-              </li>
-          </ul>
+  <nav class="navbar">
+      <div id='navbar__title'>Cubie's meme API</div>
+      <div class="navbar__container">
+        <div class="navbar__toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </nav>
-    <div className="center-object">
-      <div className="wrapper">
-        <main className='page-main'>
-          a
-        </main> 
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="https://cybercube21.de" class="navbar__links"> Home </a>
+            </li>
+            <li class="navbar__item">
+              <a href="https://memes.cybercube21.de" class="navbar__links"> Memes </a>
+            </li>
+            <li class="navbar__item">
+              <a href="https://cybercube21.de/contact.html" class="navbar__links"> Contact </a>
+            </li>
+        </ul>
       </div>
+  </nav>
+  <div class="center-object">
+    <div class="wrapper">
+      <main class='page-main'>
+        Want to implement my memes on your Website? Just check the options below!
+        <h2 class="accordion-header" id="headingPing">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePing" aria-expanded="true" aria-controls="collapsePing">
+              <span class="badge badge_get" style="margin-right: 5px;">get</span><label id="endpoint">/ping</label>
+          </button>
+        </h2>
+      </main> 
     </div>
   </div>
 </body>
