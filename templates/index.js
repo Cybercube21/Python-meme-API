@@ -15,4 +15,4 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
-} 
+}

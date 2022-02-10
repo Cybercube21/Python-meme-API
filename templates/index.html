@@ -8,6 +8,7 @@
   <title>Index</title>
   <link rel="stylesheet" href="/templates/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/templates/count.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
       <main class='page-main'>
         <p class="headline"> Cubie's API v0.69 (Beta)</p>
         <p class="description"><b>Base URL: </b>https://api.cybercube21.de</p>
-        <p class="description"><b>Total API calls: </b>Coming Soon!</p>
+        <div class="description"><b>Total API calls: </b><a id="api_calls_counter"><script>loadFile("/count.txt")</script></a></div>
         <div class="endpoints">
           <p class="endpoint_headline">Endpoints</p>
           <button class="accordion" id="headline_accordion">GET /ping</button>
