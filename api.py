@@ -20,14 +20,14 @@ def watch_dir():
     global file_list
     for event in notify_adapter.event_gen(yield_nones=False):
         (_, type_names, path, filename) = event
-        print(type_names)
 
         if (('IN_CLOSE_WRITE' in type_names or 'IN_MOVED_TO' in type_names) and filename != ''):
             file_list=os.listdir(r"memes/")
-            print("New File")
+            print("New File added")
 
 
 watch_thread = threading.Thread(target=watch_dir)
+watch_thread.daemon = True
 watch_thread.start()
 
 @app.route("/")
@@ -65,4 +65,3 @@ api.add_resource(Memes, '/memes')
 
 if __name__ == '__main__':
     app.run(port=6969)
-    watch_thread.join()
