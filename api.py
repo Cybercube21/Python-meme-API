@@ -1,4 +1,3 @@
-from email.errors import UndecodableBytesDefect
 from flask import Flask
 from flask_restful import Resource, Api
 from flask import render_template
