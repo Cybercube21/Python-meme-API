@@ -1,9 +1,10 @@
-from flask import Flask
-from flask_restful import Resource, Api
-from flask import render_template
+#Imports
 import os, random
 import threading
 import inotify.adapters
+from flask import Flask
+from flask_restful import Resource, Api
+from flask import render_template
 
 #Setting Flask's Static Folder 
 app = Flask(__name__,
