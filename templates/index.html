@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cubie's API Reference</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap" rel="prefetch" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/templates/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="/templates/count.js"></script>
-  <!-- Meta Data -->
-   <meta name="theme-color" content="#9966FF">
-   <meta content="Cybercube21 API" property="og:title" />
-   <meta content="Cubie's official API reference" property="og:description" />
-   <meta content="Cubie's official API reference" name="description" />
-   <meta name="revisit-after" content="2 days">
-   <meta name="keywords" content="Cybercube21, Anime, twitch, Discord, Gaming, Cybercube, API">
-   <meta property="og:locale" content="en_GB" />
-   <meta property="og:site_name" content="Cybercube21 API" />
-</head>
-
-<body>
-  <nav class="navbar">
-      <div class="navbar__container">
-        <div class="navbar__toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-              <a href="https://cybercube21.de" class="navbar__links"> Home </a>
-            </li>
-            <li class="navbar__item">
-              <a href="https://memes.cybercube21.de" class="navbar__links"> Memes </a>
-            </li>
-            <li class="navbar__item">
-              <a href="https://cybercube21.de/contact.html" class="navbar__links"> Contact </a>
-            </li>
-        </ul>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Cubie's API Reference</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap" rel="prefetch" as="font" type="font/woff2" crossorigin>
+      <link rel="stylesheet" href="/templates/index.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="/templates/count.js"></script>
+      <!-- Meta Data -->
+      <meta name="theme-color" content="#9966FF">
+      <meta content="Cybercube21 API" property="og:title" />
+      <meta content="Cubie's official API reference" property="og:description" />
+      <meta content="Cubie's official API reference" name="description" />
+      <meta name="revisit-after" content="2 days">
+      <meta name="keywords" content="Cybercube21, Anime, twitch, Discord, Gaming, Cybercube, API">
+      <meta property="og:locale" content="en_GB" />
+      <meta property="og:site_name" content="Cybercube21 API" />
+   </head>
+   <body>
+      <nav class="navbar">
+         <div class="navbar__container">
+            <div class="navbar__toggle">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+               <li class="navbar__item">
+                  <a href="https://cybercube21.de" class="navbar__links"> Home </a>
+               </li>
+               <li class="navbar__item">
+                  <a href="https://memes.cybercube21.de" class="navbar__links"> Memes </a>
+               </li>
+               <li class="navbar__item">
+                  <a href="https://cybercube21.de/contact.html" class="navbar__links"> Contact </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="center-object">
+         <div class="wrapper">
+            <main class='page-main'>
+               <p class="headline"> Cubie's API v0.69 (Beta)</p>
+               <p class="description"><b>Base URL: </b>https://api.cybercube21.de</p>
+               <div class="description">
+                  <b>Total API calls: </b>
+                  <a id="api_calls_counter">
+                     <script>loadFile("/count.txt")</script>
+                  </a>
+               </div>
+               <div class="endpoints">
+                  <p class="endpoint_headline">Endpoints</p>
+                  <button class="accordion" id="headline_accordion">GET /ping</button>
+                  <div class="panel">
+                     <p>Ping the server:</p>
+                     <p class="panel_link">https://api.cybercube21.de/ping</p>
+                  </div>
+                  <button class="accordion">GET /memes</button>
+                  <div class="panel">
+                     <p>Get a URL for a random meme:</p>
+                     <p class="panel_link">https://api.cybercube21.de/memes</p>
+                  </div>
+               </div>
+            </main>
+         </div>
       </div>
-  </nav>
-  <div class="center-object">
-    <div class="wrapper">
-      <main class='page-main'>
-        <p class="headline"> Cubie's API v0.69 (Beta)</p>
-        <p class="description"><b>Base URL: </b>https://api.cybercube21.de</p>
-        <div class="description"><b>Total API calls: </b><a id="api_calls_counter"><script>loadFile("/count.txt")</script></a></div>
-        <div class="endpoints">
-          <p class="endpoint_headline">Endpoints</p>
-          <button class="accordion" id="headline_accordion">GET /ping</button>
-            <div class="panel">
-              <p>Ping the server:</p>
-              <p class="panel_link">https://api.cybercube21.de/ping</p>
-            </div>
-            <button class="accordion">GET /memes</button>
-            <div class="panel">
-              <p>Get a URL for a random meme:</p>
-              <p class="panel_link">https://api.cybercube21.de/memes</p>
-            </div>
-        </div>
-      </main> 
-    </div>
-  </div>
-  <script src="/templates/index.js"></script>
-</body>
-
+      <script src="/templates/index.js"></script>
+   </body>
 </html>
