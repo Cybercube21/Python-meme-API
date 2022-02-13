@@ -6,7 +6,7 @@ An API in Python i wrote as backend for [my meme website](https://memes.cybercub
 ## Installation
 
 Clone the repo and install the dependencies via the requerements.txt.\
-To execute & start the API just start it with Python.
+To start the API just execute the api.py.
 
 ```
 python3 ./api.py
@@ -43,3 +43,7 @@ Example Response:
 
 ## Contact 
 Join my [Discord Server](https://discord.gg/4XYcD2Jk54) or DM me: Cybercube#0499
+
+
+## License
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
