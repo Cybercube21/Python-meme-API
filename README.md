@@ -6,7 +6,8 @@ An API in Python i wrote as backend for [my meme website](https://memes.cybercub
 ## Installation
 
 Clone the repo and install the dependencies via the requerements.txt.\
-To start the API just execute the api.py.
+To start, make sure you create a folder called "memes". Right now pictures has to be .webp's and videos .webm's. Ill maybe change that in the future, but dont count on it.
+Then you can just execute the api.py to start the API.
 
 ```
 python3 ./api.py
