@@ -90,7 +90,7 @@ def meme(meme):
         '<meta property="twitter:title" content="memes.cybercube21.de">',
         '<meta property="twitter:image" content="https://api.cybercube21.de/memes/'+ meme + '">']
 
-        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
+        return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
     
     elif (fileExt == ".webm"):
@@ -98,10 +98,10 @@ def meme(meme):
         meta_tags = ['<meta property="og:type" content="video">', 
         '<meta property="og:video" content="https://api.cybercube21.de/memes/' + meme + '">']
 
-        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
+        return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
     else:
-        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
+        return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
 # Run flask
 if __name__ == '__main__':
