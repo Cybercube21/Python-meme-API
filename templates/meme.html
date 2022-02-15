@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Cubie's API Reference</title>
+      <link rel="stylesheet" href="/templates/index.css">
+      <!-- Meta Data -->
+      <meta name="theme-color" content="#9966FF">
+      <meta property="og:title" content="memes.cybercube21.de">
+      <meta name="revisit-after" content="2 days">
+      <meta property="og:locale" content="en_GB" />
+      {{ meta_tags[0]|safe }}
+      {{ meta_tags[1]|safe }}
+      {{ meta_tags[2]|safe }}
+   </head>
+   <body>
+      <div class="center-object">
+         <div class="wrapper">
+            <main class='page-main'>
+                {{ meme_tag|safe }}
+            </main>
+         </div>
+      </div>
+      <script src="/templates/index.js"></script>
+   </body>
+</html>
