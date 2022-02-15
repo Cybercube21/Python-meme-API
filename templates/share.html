@@ -19,7 +19,12 @@
       <div class="center-object">
          <div class="wrapper">
             <main class='page-main'>
-                {{ meme_tag|safe }}
+               <button class='back_button' onclick="window.location.href='https://memes.cybercube21.de';">
+                  <p class='panel_text'>go back...</p>
+               </button>
+                <div class="meme_container">
+                  {{ meme_tag|safe }}
+                </div>
             </main>
          </div>
       </div>
