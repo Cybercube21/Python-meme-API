@@ -1,10 +1,12 @@
 #Imports
-import os, random
+import os
+import random
 import threading
 import inotify.adapters
 from flask import Flask
 from flask_restful import Resource, Api
 from flask import render_template
+from flask_bootstrap import Bootstrap
 
 #Setting Flask's Static Folder 
 app = Flask(__name__,
@@ -73,6 +75,33 @@ class Memes(Resource):
 # Adding the Resources for flask
 api.add_resource(Ping, '/ping')
 api.add_resource(Memes, '/memes')
+
+# Using Flask Bootstrap
+Bootstrap(app)
+
+# Endpoint for sharing memes in an embed
+@app.route('/share/<string:meme>')
+def meme(meme):
+    fileExt = os.path.splitext(meme)[1]
+
+    if(fileExt == ".webp"):
+        meme_tag = '<img src="https://api.cybercube21.de/memes/' + meme + '" />'
+        meta_tags = ['<meta property="twitter:card" content="summary_large_image">',
+        '<meta property="twitter:title" content="memes.cybercube21.de">',
+        '<meta property="twitter:image" content="https://api.cybercube21.de/memes/'+ meme + '">']
+
+        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
+
+    
+    elif (fileExt == ".webm"):
+        meme_tag = '<video src="https://api.cybercube21.de/memes/' + meme + '" controls playsInline />'
+        meta_tags = ['<meta property="og:type" content="video">', 
+        '<meta property="og:video" content="https://api.cybercube21.de/memes/' + meme + '">']
+
+        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
+
+    else:
+        return render_template("meme.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
 # Run flask
 if __name__ == '__main__':
