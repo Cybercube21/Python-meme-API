@@ -85,7 +85,7 @@ def meme(meme):
     fileExt = os.path.splitext(meme)[1]
 
     if(fileExt == ".webp"):
-        meme_tag = '<img src="https://api.cybercube21.de/memes/' + meme + '" />'
+        meme_tag = '<img class="meme_container-media" src="https://api.cybercube21.de/memes/' + meme + '" />'
         meta_tags = ['<meta property="twitter:card" content="summary_large_image">',
         '<meta property="twitter:title" content="memes.cybercube21.de">',
         '<meta property="twitter:image" content="https://api.cybercube21.de/memes/'+ meme + '">']
@@ -94,7 +94,7 @@ def meme(meme):
 
     
     elif (fileExt == ".webm"):
-        meme_tag = '<video src="https://api.cybercube21.de/memes/' + meme + '" controls playsInline />'
+        meme_tag = '<video class="meme_container-media" src="https://api.cybercube21.de/memes/' + meme + '" controls playsInline />'
         meta_tags = ['<meta property="og:type" content="video">', 
         '<meta property="og:video" content="https://api.cybercube21.de/memes/' + meme + '">']
 
