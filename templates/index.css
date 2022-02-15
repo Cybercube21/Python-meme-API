@@ -180,13 +180,20 @@ body {
     transition:1s;
     margin-top:15px
 }
-.meme_container{
-    position:absolute;
-    top:55%;
-    right:50%;
-    transform:translate(50%,-50%)
-}
+
 .panel_text{
     font-weight:600;
     font-size:16px
+}
+
+.meme_container {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+.meme_container-media {
+    max-width: 80vh;
+    max-height: 80vh;
+    display: inline;
 }
