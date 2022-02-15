@@ -84,23 +84,35 @@ Bootstrap(app)
 def meme(meme):
     fileExt = os.path.splitext(meme)[1]
 
+    # If file is a .webp
     if(fileExt == ".webp"):
+
+        # Set <img> tags for webp's
         meme_tag = '<img class="meme_container-media" src="https://api.cybercube21.de/memes/' + meme + '" />'
+
+        # Set <meta> tags for img's
         meta_tags = ['<meta property="twitter:card" content="summary_large_image">',
         '<meta property="twitter:title" content="memes.cybercube21.de">',
         '<meta property="twitter:image" content="https://api.cybercube21.de/memes/'+ meme + '">']
 
+        # Render the share.html template
         return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
-    
+    # If file is a .webm
     elif (fileExt == ".webm"):
+
+        # Set <video> tags for webm's
         meme_tag = '<video class="meme_container-media" src="https://api.cybercube21.de/memes/' + meme + '" controls playsInline />'
+
+        # Set <meta> tags for videos
         meta_tags = ['<meta property="og:type" content="video">', 
         '<meta property="og:video" content="https://api.cybercube21.de/memes/' + meme + '">']
 
+        # Render the share.html template
         return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
     else:
+        # Render the share.html template
         return render_template("share.html", meme=meme, meme_tag=meme_tag, meta_tags=meta_tags)
 
 # Run flask
