@@ -33,7 +33,7 @@ You can change the Port its running on at the bottom of the api.py. The default 
 
 | Type     | Description                |
 | :------- | :------------------------- |
-| `json` | Returns a respone :o |
+| `json` | Returns a response :o |
 
 #### Get a URL to a random meme 
 
