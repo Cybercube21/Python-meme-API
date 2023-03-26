@@ -1,15 +1,24 @@
 
-# api.cybercube21.de
+# Python meme API
 
-In this repo i provide the code hosted on [api.cybercube21.de](https://api.cybercube21.de). 
-An API in Python i wrote as backend for [my meme website](https://memes.cybercube21.de). It uses Flask to provide the Endpoints which are easily expandable. 
+In this repo i provide the code ~~hosted on [api.cybercube21.de](https://api.cybercube21.de).~~ This will be replaced by a backend written in Nuxt soon.
+
+An API in Python i wrote as backend for [my meme website](https://github.com/Cybercube21/ReactJS-Frontend). It uses Flask to provide the Endpoints which are easily expandable. 
 ## Installation
 
-Clone the repo and install the dependencies via the requerements.txt.\
-To start, make sure you create a folder called "memes". Right now pictures has to be .webp's and videos .webm's. Ill maybe change that in the future, but dont count on it.
+Clone the repo and install the dependencies via the requerements.txt.
+
+```shell
+git clone https://github.com/Cybercube21/Python-meme-API
+cd Python-meme-API/
+pip3 install -r requirements.txt
+```
+
+To start, make sure you create a folder called "memes". Right now pictures has to be .webp's and videos .webm's.
+
 Then you can just execute the api.py to start the API.
 
-```
+```shell
 python3 ./api.py
 ```
 
